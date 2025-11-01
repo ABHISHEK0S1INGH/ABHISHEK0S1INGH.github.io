@@ -12,14 +12,14 @@ export default defineConfig({
   devToolbar: { enabled: false },
   // Build configuration for optimal GitHub Pages deployment
   build: {
-    // Inline small stylesheets to reduce requests
-    inlineStylesheets: 'auto',
+    // Keep CSS as external files for better debugging and caching
+    inlineStylesheets: 'never',
   },
   // Vite configuration for better asset handling
   vite: {
     build: {
-      // Ensure CSS is always generated as separate files
-      cssCodeSplit: true,
+      // Generate a single CSS bundle for all pages
+      cssCodeSplit: false,
       // Rollup options for asset handling
       rollupOptions: {
         output: {

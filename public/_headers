@@ -2,9 +2,11 @@
 # Note: GitHub Pages may not support all custom headers, but this file documents the intended behavior
 
 # Cache static assets for a long time (they have hashed filenames)
-/_astro/*
+/_astro/*.css
   Cache-Control: public, max-age=31536000, immutable
-  Content-Type: text/css
+
+/_astro/*.js
+  Cache-Control: public, max-age=31536000, immutable
 
 # Cache images
 /*.png
