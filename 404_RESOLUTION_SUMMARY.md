@@ -33,7 +33,7 @@ See **[SETUP_GITHUB_PAGES.md](SETUP_GITHUB_PAGES.md)** for comprehensive instruc
 
 ## The Problem Explained
 
-Your repository is currently configured to deploy using the old "Deploy from a branch" method, but your project uses GitHub Actions for deployment. These are two different deployment methods, and they're not compatible.
+Your repository is currently configured to deploy using the "Deploy from a branch" method, but your project uses GitHub Actions for deployment. These are two different deployment methods, and they're not compatible.
 
 **What you need to do:**
 1. Go to Settings → Pages in your GitHub repository
@@ -45,8 +45,8 @@ That's it! Once you do this, your website will be live at https://abhishek0s1ing
 ## Why This Happens
 
 GitHub Pages has two deployment methods:
-1. **Deploy from a branch** (old method) - GitHub builds and deploys from a specific branch
-2. **GitHub Actions** (new method) - You control the build and deployment through GitHub Actions
+1. **Deploy from a branch** (traditional method) - GitHub builds and deploys from a specific branch
+2. **GitHub Actions** (automated method) - You control the build and deployment through GitHub Actions
 
 Your project uses method #2, but GitHub is set to use method #1. You need to tell GitHub to use method #2.
 

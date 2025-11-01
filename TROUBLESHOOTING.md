@@ -1,4 +1,4 @@
-# Troubleshooting Guide
+# GitHub Pages Troubleshooting Guide
 
 ## 🚨 Website Showing 404 Error?
 

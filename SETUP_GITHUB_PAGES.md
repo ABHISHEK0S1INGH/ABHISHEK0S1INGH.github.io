@@ -31,7 +31,8 @@ If your website at **https://abhishek0s1ingh.github.io/** shows a 404 error, fol
 After changing the settings, you need to trigger a deployment:
 
 **Option A: Push a new commit (Recommended)**
-- Make any small change to your repository (e.g., update README.md)
+- Make a small change to your repository (e.g., add a comment in README.md or update a timestamp)
+- Example: Add a line like `<!-- Updated: 2025-11-01 -->` to README.md
 - Commit and push to the `main` branch
 - GitHub Actions will automatically deploy
 
@@ -88,7 +89,7 @@ If the GitHub Actions workflow fails:
 2. Click on the failed job (usually "build" or "deploy")
 3. Read the error message
 4. Common issues:
-   - **"npm ci"** fails: Delete `package-lock.json`, run `npm install` locally, commit and push
+   - **"npm ci"** fails: Try `npm ci --cache-clean` or `npm install --force` first
    - **"Build"** fails: Check for syntax errors in your code
    - **"Deploy"** fails: Verify GitHub Pages permissions (should be automatic)
 
