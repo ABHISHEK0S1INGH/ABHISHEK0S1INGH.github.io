@@ -26,8 +26,10 @@ To enable GitHub Pages for your repository, follow these steps:
 
 Once deployed, your site will be available at:
 ```
-https://abhishek0s1ingh.github.io/myproject
+https://abhishek0s1ingh.github.io
 ```
+
+**Note**: This deployment will replace any existing content at this URL.
 
 ## How It Works
 
@@ -42,8 +44,7 @@ https://abhishek0s1ingh.github.io/myproject
 ## Configuration Files Modified
 
 1. **astro.config.mjs**: Updated with the correct GitHub Pages URL
-   - `site`: Set to your GitHub Pages domain
-   - `base`: Set to `/myproject` (your repository name)
+   - `site`: Set to your GitHub Pages domain (https://abhishek0s1ingh.github.io)
 
 2. **.github/workflows/deploy-github-pages.yml**: New workflow file for Astro deployment
    - Replaces the previous Jekyll workflow
