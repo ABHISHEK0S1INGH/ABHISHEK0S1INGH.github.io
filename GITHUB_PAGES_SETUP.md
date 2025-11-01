@@ -50,13 +50,37 @@ https://abhishek0s1ingh.github.io/
    - Uses Node.js and npm to build the Astro project
    - Uploads the `dist` folder to GitHub Pages
 
+3. **public/.nojekyll**: Empty file that disables Jekyll processing
+   - Critical for Astro sites on GitHub Pages
+   - Prevents GitHub from treating the site as a Jekyll project
+   - Automatically copied to `dist/` during build
+
 ## Troubleshooting
 
-If deployment fails:
+### If you see a 404 error when visiting the site:
+
+1. **Check GitHub Pages is enabled**:
+   - Go to Settings → Pages
+   - Ensure "Source" is set to "GitHub Actions" (NOT "Deploy from a branch")
+
+2. **Verify the deployment succeeded**:
+   - Go to the Actions tab
+   - Check that the "Deploy Astro site to GitHub Pages" workflow completed successfully
+   - Look for the deployment URL in the workflow output
+
+3. **Check for the .nojekyll file**:
+   - The `public/.nojekyll` file should exist in the repository
+   - After build, it should appear in the `dist/` folder
+   - This file prevents GitHub from processing the site as Jekyll
+
+4. **Wait for DNS propagation**:
+   - After first enabling GitHub Pages, it may take a few minutes for the site to become available
+   - The site URL will be: https://abhishek0s1ingh.github.io/
+
+### If deployment fails:
 1. Check the Actions tab for error messages
-2. Ensure GitHub Pages is enabled in repository settings
-3. Verify that the source is set to "GitHub Actions"
-4. Check that the workflow has the necessary permissions
+2. Ensure the workflow has the necessary permissions (should be automatic)
+3. Try manually triggering the workflow from the Actions tab
 
 ## Local Development
 
