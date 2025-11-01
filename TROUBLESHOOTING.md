@@ -1,6 +1,16 @@
-# CSS Not Loading - Troubleshooting Guide
+# GitHub Pages Troubleshooting Guide
 
-## Problem
+## 🚨 Website Showing 404 Error?
+
+**If your website shows "404 Not Found", this is likely a GitHub Pages configuration issue, NOT a code issue.**
+
+👉 **See [QUICK_FIX_404.md](QUICK_FIX_404.md) for a 2-minute fix!** 👈
+
+---
+
+## CSS Not Loading
+
+### Problem
 CSS styles are not appearing on the deployed GitHub Pages site, but work correctly in local development.
 
 ## Solution Steps
