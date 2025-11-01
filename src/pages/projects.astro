@@ -5,47 +5,36 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">Selected Projects</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
+    title="AiSHA — Your Personal Health Assistant"
+    img="/aisha.jpg"
+    desc="Production-grade biometric analysis via rPPG to compute 8+ metrics (SpO2, HRV, blood pressure, stress). FastAPI microservice with AWS integration, Kafka logging, and JWT-secured REST APIs with comprehensive error handling. Live in DocPrime (PolicyBazaar)."
+    url="https://github.com/ABHISHEK0S1INGH/AiSHA---Personal-Health-Assistant"
+    badge="LIVE"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
-  </div>
-
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Machine-Learning-Prediction-App"
+    img="/machine-learning.jpg"
+    desc="Streamlit app for uploading CSVs, running a pre-trained ML model to generate predictions, and visualizing results interactively."
+    url="https://github.com/ABHISHEK0S1INGH/Machine-Learning-Prediction-App"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Data Warehouse and Analytics Project"
+    img="/data_warehouse.png"
+    desc="End-to-end data warehousing and analytics solution demonstrating best practices from ingestion to warehouse modeling and insightful dashboards. Portfolio project showcasing data engineering and analytics workflows."
+    url="https://github.com/ABHISHEK0S1INGH/Data_warehouse"
+    badge="DATA"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 5"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="House_Price_Predictor"
+    img="/hourse_price.png"
+    desc="End-to-end ML project: data collection, EDA, correlation analysis, visualization, preprocessing pipeline, handling missing values, and model training for house price prediction in Jupyter."
+    url="https://github.com/ABHISHEK0S1INGH/House_Price_Predictor"
   />
 </BaseLayout>

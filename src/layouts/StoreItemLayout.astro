@@ -21,17 +21,23 @@ const {
 
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(updatedDate).format("ll");
-import { Image } from "astro:assets";
+// Using standard <img> for string paths in /public
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
-      {
-        heroImage && (
-          <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />
-        )
-      }
+      {heroImage && (
+        <img
+          width={750}
+          height={422}
+          src={heroImage}
+          alt={title}
+          loading="lazy"
+          class="w-full mb-6"
+          onerror="this.onerror=null;this.src='/post_img.webp';"
+        />
+      )}
       <div class="">
         <h1 class="title my-2 text-4xl font-bold">
           {title}

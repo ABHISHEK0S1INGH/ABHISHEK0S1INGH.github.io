@@ -8,11 +8,16 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
 
-  <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <div class="mb-6 text-justify">
+    <p class="max-w-3xl">
+      Abhishek Singh — Backend Engineer focused on Java and Spring Boot. I build secure, scalable microservices and APIs
+      with JWT authentication, JPA/Hibernate, and well‑designed data models on PostgreSQL/MySQL. Comfortable with
+      in‑memory caching, structured logging (Kafka), timezone‑safe utilities, Docker‑based deployments and AWS.
+      Recently, as a Java Backend Intern at PolicyBazaar (Aug–Nov 2025, Gurugram), I delivered a production healthcare
+      consultation microservice enabling online/offline doctor bookings, patient profiling and payment tracking; integrated
+      partner REST APIs; added robust validation, caching and observability; and implemented AiSHA health‑data endpoints
+      (metrics/graphs and authenticated POST writes).
+    </p>
   </div>
 
   <div class="mb-5">
@@ -21,12 +26,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="Bachelor of Technology — Information Technology"
+      subtitle="2021 – 2025 · Dr APJ Abdul Kalam Technical University, Lucknow"
     />
   </div>
 
@@ -36,22 +37,19 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Java Backend Intern — PolicyBazaar.com"
+      subtitle="Aug 2025 – Nov 2025 · On-site Gurugram"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Built a Spring Boot microservice for healthcare consultations (doctor bookings, patient profiling, payment status).
+      Integrated JWT-secured partner REST APIs with JPA persistence and Kafka-based structured logging.
+      Added robust validation, in-memory caching and date/time utilities for reliable, timezone-aware processing.
+      Implemented AiSHA health-data APIs (graphs and POST endpoints) with proper JWT authentication and DB writes.
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="AI Researcher — Coding Jr"
+      subtitle="Jan 2025 – Feb 2025 · Remote"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Built a custom Copilot using open Large Language Models and fine-tuned it for a specific use case.
     </TimeLineElement>
   </div>
 
@@ -61,10 +59,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      Machine Learning Data Science Program — Greeks for Greeks (Apr 2024 – Sep 2024)
     </li>
   </ul>
 
@@ -72,21 +67,20 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
+  <ul class="list-disc md:columns-3 columns-2 mx-6">
+    <li>Java</li>
+    <li>Spring Boot</li>
+    <li>Git</li>
+    <li>Docker</li>
+    <li>SQL (PostgreSQL, MySQL)</li>
+    <li>AWS</li>
+    <li>Linux</li>
+    <li>Scikit-learn</li>
+    <li>Django (Backend)</li>
+    <li>Python</li>
+    <li>C++</li>
+    <li>Machine Learning</li>
+    <li>Flutter</li>
+    <li>Data Structures & Algorithms</li>
   </ul>
 </BaseLayout>

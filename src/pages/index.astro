@@ -10,69 +10,90 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
-    <div class="py-2">
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
-      </text>
-    </div>
-    <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
-    </div>
-  </div>
+  <main class="pb-12 mt-5">
+    <section class="text-lg">
+      <div class="text-xl py-1">Hello 👋</div>
+      <h1 class="text-5xl font-bold">I'm Abhishek Singh</h1>
+  <h2 class="text-2xl py-3 font-semibold">Backend Engineer — Spring Boot · Backend Database Management · API Design</h2>
+      <p class="text-base leading-relaxed text-base-content/80">
+        Java Backend Intern at <strong>PolicyBazaar</strong> — built production-ready microservices for healthcare
+        consultations, integrating JWT-secured REST APIs, Kafka-based logging, and in-memory caching for
+        high-performance data processing.
+      </p>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
-  </div>
+      <p class="py-2 max-w-3xl">
+        I'm a backend engineer focused on building reliable, scalable systems. My work spans API design, data modelling,
+        performance optimization, and distributed systems. Below you'll find a short summary of my experience, skills
+        and selected projects — for the full CV download the resume or visit the CV page.
+      </p>
 
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
+      <div class="mt-6 flex gap-3">
+        <a class="btn btn-primary" href="/resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <a class="btn btn-outline" href="/cv">View CV</a>
+        <a class="btn" href="https://github.com/ABHISHEK0S1INGH" target="_blank">GitHub</a>
+      </div>
+    </section>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
+    <section id="about" class="mt-12">
+      <h3 class="text-2xl font-semibold">About</h3>
+        <p class="mt-2 max-w-3xl">
+          Backend engineer focused on Java and Spring Boot, building secure, scalable APIs and microservices with JWT,
+          JPA/Hibernate, and solid data models on PostgreSQL/MySQL. Hands‑on with caching, Kafka‑based logging,
+          Docker, and AWS. At PolicyBazaar (Aug–Nov 2025), shipped a production consultation microservice and
+          implemented AiSHA health‑data APIs (metrics/graphs and authenticated writes).
+        </p>
+    </section>
 
-  {
-    last_posts.map((post) => (
-      <>
+    <section id="experience" class="mt-10">
+      <h3 class="text-2xl font-semibold">Experience</h3>
+      <article class="mt-4">
+        <h4 class="font-bold">Java Backend Intern — PolicyBazaar.com</h4>
+        <div class="text-sm text-muted">Aug 2025 – Nov 2025 • On-site Gurugram</div>
+        <ul class="list-disc ml-6 mt-2">
+          <li>Built a Spring Boot microservice for healthcare consultations enabling online/offline doctor bookings, patient profiling, and payment status tracking.</li>
+          <li>Integrated secure partner REST APIs with JWT, persisted via JPA, and streamed structured logs to Kafka.</li>
+          <li>Added robust validation, in-memory caching, and date/time utilities for reliable, timezone-aware processing.</li>
+          <li>Implemented APIs for AiSHA health data (graphs and POST endpoints) with proper JWT authentication and DB persistence.</li>
+        </ul>
+      </article>
+
+      <article class="mt-6">
+        <h4 class="font-bold">AI Researcher — Coding Jr</h4>
+        <div class="text-sm text-muted">Jan 2025 – Feb 2025 • Remote</div>
+        <ul class="list-disc ml-6 mt-2">
+          <li>Built a custom Copilot using open Large Language Models and fine-tuned it for a domain-specific use case.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="education" class="mt-10">
+      <h3 class="text-2xl font-semibold">Education</h3>
+      <p class="mt-2">
+        Bachelor of Technology (Information Technology), Dr APJ Abdul Kalam Technical University, Lucknow — 2021–2025
+      </p>
+    </section>
+
+    <section id="skills" class="mt-10">
+      <h3 class="text-2xl font-semibold">Skills</h3>
+      <p class="mt-2">Java · Spring Boot · Git · Docker · SQL · PostgreSQL · MySQL · AWS · Linux · Scikit-learn · Django (Backend) · Python · C++ · Machine Learning · Flutter · Data Structures & Algorithms</p>
+    </section>
+
+    <section id="projects" class="mt-10">
+      <h3 class="text-2xl font-semibold">Selected projects</h3>
+      <div class="mt-4 grid gap-4">
         <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
+          title="AiSHA — Your Personal Health Assistant"
+          img="/aisha.jpg"
+          desc="Production-grade biometric analysis using rPPG to derive 8+ health metrics (SpO2, HRV, blood pressure, stress). FastAPI microservice with AWS integration, Kafka logging, and JWT-secured REST APIs with robust error handling."
+          url="https://github.com/ABHISHEK0S1INGH/AiSHA---Personal-Health-Assistant"
+          badge="LIVE"
         />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+      </div>
+    </section>
+
+    <section id="contact" class="mt-10 mb-12">
+      <h3 class="text-2xl font-semibold">Contact</h3>
+      <p class="mt-2">Email: <a href="mailto:abhi620548@gmail.com">abhi620548@gmail.com</a> • GitHub: <a href="https://github.com/ABHISHEK0S1INGH" target="_blank">ABHISHEK0S1INGH</a></p>
+    </section>
+  </main>
 </BaseLayout>

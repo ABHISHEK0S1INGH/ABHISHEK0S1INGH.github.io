@@ -2,39 +2,49 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
-
-<BaseLayout title="Projects" sideBarActiveItemID="services">
+<BaseLayout title="Services" sideBarActiveItemID="services">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Services Header</div>
+    <div class="text-3xl w-full font-bold mb-2">Services</div>
+    <p class="opacity-80 mb-5 max-w-3xl">
+      I help teams and founders ship production-ready software end-to-end: mobile apps, modern websites, secure APIs,
+      ML/AI solutions, and practical AI agents.
+    </p>
   </div>
 
   <HorizontalCard
-    title="Service 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    title="Flutter App Development"
+    img="/flutter.jpeg"
+    desc="Cross‑platform mobile apps with Flutter/Dart: clean UI, robust state management (Provider/Bloc), API integration, offline sync, and Play Store/App Store packaging."
+    url="#"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Website Development"
+    img="/website.png"
+    desc="Fast, SEO‑friendly sites using Astro/React/Tailwind. From landing pages to content sites with CMS, analytics, and CI/CD."
+    url="#"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Backend APIs — Spring Boot / FastAPI"
+    img="/springg.jpg"
+    desc="Secure, scalable REST APIs with JWT, OpenAPI/Swagger docs, SQL/NoSQL persistence, caching, Docker, and cloud deploys. Monitoring and logging included."
+    url="#"
+    badge="POPULAR"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="ML / AI Projects"
+    img="/machine-learning.jpg"
+    desc="Data pipelines, model development (classic ML and deep learning), evaluation, and inference services. Optional MLOps: versioning, tracking, and deployment."
+    url="#"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="AI Agent Building"
+    img="/aigent.jpeg"
+    desc="Task‑oriented AI agents with tools/RAG, workflow orchestration, and integrations (Slack/WhatsApp/API). Deployed with guardrails and observability."
+    url="#"
     badge="NEW"
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Service 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Service 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Service 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
   />
 </BaseLayout>

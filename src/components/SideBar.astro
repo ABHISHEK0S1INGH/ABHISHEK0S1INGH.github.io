@@ -1,6 +1,5 @@
 ---
 import SideBarFooter from "./SideBarFooter.astro";
-import { Image } from "astro:assets";
 import SideBarMenu from "./SideBarMenu.astro";
 const { sideBarActiveItemID } = Astro.props;
 ---
@@ -11,10 +10,20 @@ const { sideBarActiveItemID } = Astro.props;
     <div class="w-fit mx-auto mt-5 mb-6">
       <a href="/">
         <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
-          <div class="w-[8.5rem]">
-            <Image class="mask mask-circle" format="webp" width={300} height={300} src="/profile.webp" alt="Profile image" />
-          </div>
+            <div class="w-[8.5rem]">
+              <picture>
+                <source srcset="/profile.jpg" type="image/jpeg" />
+                <source srcset="/profile.png" type="image/png" />
+                <img class="mask mask-circle" src="/profile.webp" alt="Profile image" width="300" height="300" loading="eager" />
+              </picture>
+            </div>
         </div>
+      </a>
+    </div>
+    <div class="text-center mb-4">
+      <a href="/" class="no-underline">
+        <div class="font-bold text-lg">Abhishek Singh</div>
+        <div class="text-sm text-muted">Backend Engineer</div>
       </a>
     </div>
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
