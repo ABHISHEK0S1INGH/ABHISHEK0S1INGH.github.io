@@ -4,6 +4,14 @@
 
 Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with a Blog, CV, Project Section, Store, and RSS Feed.
 
+## 🚨 Seeing a 404 Error?
+
+**If your website shows "404 Not Found", you need to configure GitHub Pages settings!**
+
+👉 **[Follow the Complete Setup Guide](SETUP_GITHUB_PAGES.md)** 👈
+
+The most common issue is that GitHub Pages source is not set to "GitHub Actions". This is a **manual step** that cannot be automated through code. See the setup guide for detailed instructions with screenshots.
+
 ## Demo
 
 View a live demo of [Astrofy](https://astrofy-template.netlify.app/)
