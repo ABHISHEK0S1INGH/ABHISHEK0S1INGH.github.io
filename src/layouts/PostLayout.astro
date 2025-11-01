@@ -19,11 +19,11 @@ const displayDate = dayjs(pubDate).format("ll")
         <img
           width={750}
           height={422}
-          src={heroImage}
+          src={heroImage.startsWith('/') ? `${import.meta.env.BASE_URL}${heroImage}` : heroImage}
           alt={title}
           loading="lazy"
           class="w-full mb-6"
-          onerror="this.onerror=null;this.src='/post_img.webp';"
+          onerror={`this.onerror=null;this.src='${import.meta.env.BASE_URL}/post_img.webp';`}
         />
       )}
       <h1 class="title my-2 text-4xl font-bold">{title}</h1>

@@ -28,7 +28,7 @@ const last_posts = posts.slice(0, 3);
       </p>
 
       <div class="mt-6 flex gap-3">
-        <a class="btn btn-primary" href="/resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <a class="btn btn-primary" href={`${import.meta.env.BASE_URL}/resume.pdf`} target="_blank" rel="noopener">Download Resume (PDF)</a>
         <a class="btn btn-outline" href="/cv">View CV</a>
         <a class="btn" href="https://github.com/ABHISHEK0S1INGH" target="_blank">GitHub</a>
       </div>
@@ -83,7 +83,7 @@ const last_posts = posts.slice(0, 3);
       <div class="mt-4 grid gap-4">
         <HorizontalCard
           title="AiSHA — Your Personal Health Assistant"
-          img="/aisha.jpg"
+          img={`${import.meta.env.BASE_URL}/aisha.jpg`}
           desc="Production-grade biometric analysis using rPPG to derive 8+ health metrics (SpO2, HRV, blood pressure, stress). FastAPI microservice with AWS integration, Kafka logging, and JWT-secured REST APIs with robust error handling."
           url="https://github.com/ABHISHEK0S1INGH/AiSHA---Personal-Health-Assistant"
           badge="LIVE"
