@@ -1,18 +1,16 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
-const activeClass = "bg-base-300"; // For primary color replace with `active` class
+const activeClass = "active font-medium";
 ---
 
-<ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href={import.meta.env.BASE_URL}>Home</a></li>
-    <li><a class="py-3 text-base" id="projects" href={`${import.meta.env.BASE_URL}projects`}>Projects</a></li>
-    <li><a class="py-3 text-base" id="services" href={`${import.meta.env.BASE_URL}services`}>Services</a></li>
-    <li><a class="py-3 text-base" id="store" href={`${import.meta.env.BASE_URL}store`}>Store</a></li>
-    <li><a class="py-3 text-base" id="blog" href={`${import.meta.env.BASE_URL}blog/`}>Blog</a></li>
-    <li><a class="py-3 text-base" id="cv" href={`${import.meta.env.BASE_URL}cv`}>CV</a></li>
+<ul class="menu grow shrink menu-md overflow-y-auto px-2 gap-1">
+    <li><a class="py-2.5 text-sm rounded-lg transition-colors" id="home" href={import.meta.env.BASE_URL}>Home</a></li>
+    <li><a class="py-2.5 text-sm rounded-lg transition-colors" id="projects" href={`${import.meta.env.BASE_URL}projects`}>Projects</a></li>
+    <li><a class="py-2.5 text-sm rounded-lg transition-colors" id="services" href={`${import.meta.env.BASE_URL}services`}>Services</a></li>
+    <li><a class="py-2.5 text-sm rounded-lg transition-colors" id="cv" href={`${import.meta.env.BASE_URL}cv`}>CV / Resume</a></li>
     <li>
         <a
-            class="py-3 text-base"
+            class="py-2.5 text-sm rounded-lg transition-colors"
             href="mailto:abhi620548@gmail.com"
             target="_blank"
             referrerpolicy="no-referrer-when-downgrade">Contact</a
@@ -22,5 +20,5 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
 
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
 const activeItemElem = document.getElementById(sideBarActiveItemID);
-activeItemElem && activeItemElem.classList.add(activeClass);
+activeItemElem && activeItemElem.classList.add(...activeClass.split(" "));
 </script>

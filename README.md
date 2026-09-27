@@ -270,7 +270,8 @@ You can choose among 30 themes available or create your custom theme. See themes
 
 ## Sitemap
 
-The Sitemap is generated automatically when you build your website in the root of the domain. Please update the `robots.txt` file in the public folder with your site name URL for the Sitemap.
+The Sitemap is generated automatically when you build your website in the root of the domain. Please update the `robots.txt` 
+
 
 ## Deploy
 

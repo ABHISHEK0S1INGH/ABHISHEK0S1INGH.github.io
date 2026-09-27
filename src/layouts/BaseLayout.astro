@@ -18,18 +18,29 @@ const {
 ---
 
 <!doctype html>
-<html lang="en" data-theme="lofi">
+<html lang="en" data-theme="night">
   <head>
-    <BaseHead title={title} description={description} image={image} , ogType={ogType} />
+    <BaseHead title={title} description={description} image={image}, ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
+    <script is:inline>
+      // Apply theme before paint to prevent flicker
+      const theme = localStorage.getItem("theme") || "night";
+      document.documentElement.setAttribute("data-theme", theme);
+
+      // Re-apply on View Transitions
+      document.addEventListener("astro:after-swap", () => {
+        const activeTheme = localStorage.getItem("theme") || "night";
+        document.documentElement.setAttribute("data-theme", activeTheme);
+      });
+    </script>
   </head>
-  <body>
+  <body class="bg-base-100 text-base-content antialiased selection:bg-primary selection:text-primary-content">
     <div class="bg-base-100 drawer lg:drawer-open">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content bg-base-100">
+      <div class="drawer-content bg-base-100 flex flex-col min-h-screen">
         <Header title={SITE_TITLE} />
-        <div class="md:flex md:justify-center">
-          <main class="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
+        <div class="md:flex md:justify-center grow">
+          <main class="p-6 pt-8 lg:max-w-[920px] max-w-[100vw] w-full">
             <slot />
           </main>
         </div>
