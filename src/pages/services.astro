@@ -2,71 +2,71 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
+
 <BaseLayout title="Services | Abhishek Singh" sideBarActiveItemID="services">
-  <div class="space-y-6">
-    <div class="border-b border-base-content/10 pb-4">
-      <h1 class="text-3xl font-extrabold text-base-content mb-2">Services & Capabilities</h1>
-      <p class="text-base text-base-content/80 max-w-3xl leading-relaxed">
-        I help engineering teams, startups, and founders design and ship production-ready systems: from scalable backend microservices and streaming pipelines to practical AI agents and mobile applications.
+  <div class="space-y-6 pb-12">
+    <div class="pb-4 border-b border-white/10">
+      <h1 class="text-3xl font-extrabold text-white mb-1">Services & Capabilities</h1>
+      <p class="text-sm text-white/55 max-w-2xl leading-relaxed">
+        I help engineering teams, startups, and founders design and ship production-ready systems — scalable backend microservices, AI agents, and mobile applications.
       </p>
     </div>
 
-    <div class="space-y-4">
-      <HorizontalCard
-        title="Backend Microservices & REST APIs"
-        img={`${import.meta.env.BASE_URL}springg.jpg`}
-        desc="Production-ready REST & microservice architectures with Spring Boot and FastAPI. Includes JWT security, PostgreSQL/MySQL data models, Redis caching, Kafka logging, Docker containerization, and Swagger API documentation."
-        url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20Backend%20Microservices"
-        badge="PRIMARY EXPERTISE"
-        tags={["Spring Boot", "FastAPI", "Kafka", "PostgreSQL", "Docker", "JWT"]}
-        target="_self"
-      />
+    <HorizontalCard
+      title="Backend Microservices & REST APIs"
+      img={`${import.meta.env.BASE_URL}springg.jpg`}
+      desc="Production-ready REST and microservice architectures with Spring Boot or FastAPI. JWT security, PostgreSQL/MySQL models, Redis caching, Kafka logging, Docker, and Swagger docs."
+      url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20Backend%20Microservices"
+      badge="PRIMARY"
+      tags={["Spring Boot", "FastAPI", "Kafka", "PostgreSQL", "Docker", "JWT"]}
+      target="_self"
+    />
 
-      <HorizontalCard
-        title="AI Agent & LLM Workflows"
-        img={`${import.meta.env.BASE_URL}aigent.jpeg`}
-        desc="Custom task-oriented AI agents, RAG pipelines, and automated LLM workflows with tool calling, prompt engineering, and guardrails for domain-specific automation."
-        url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20AI%20Agents"
-        badge="IN-DEMAND"
-        tags={["Python", "LLMs", "RAG", "Function Calling", "Automation"]}
-        target="_self"
-      />
+    <HorizontalCard
+      title="AI Agent & LLM Workflows"
+      img={`${import.meta.env.BASE_URL}aigent.jpeg`}
+      desc="Custom task-oriented AI agents, RAG pipelines, and automated LLM workflows with tool calling and guardrails for domain-specific automation."
+      url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20AI%20Agents"
+      badge="HOT"
+      tags={["Python", "LLMs", "RAG", "Function Calling", "Automation"]}
+      target="_self"
+    />
 
-      <HorizontalCard
-        title="Machine Learning & Data Pipelines"
-        img={`${import.meta.env.BASE_URL}machine-learning.jpg`}
-        desc="End-to-end data pipelines, exploratory analysis, biometric analysis (rPPG), predictive modeling, and model serving as low-latency microservices."
-        url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20Machine%20Learning"
-        tags={["Scikit-learn", "Python", "Data Modeling", "Inference APIs"]}
-        target="_self"
-      />
+    <HorizontalCard
+      title="Machine Learning & Data Pipelines"
+      img={`${import.meta.env.BASE_URL}machine-learning.jpg`}
+      desc="End-to-end data pipelines, biometric analysis (rPPG), predictive modeling, and model serving as low-latency microservices."
+      url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20Machine%20Learning"
+      tags={["Scikit-learn", "Python", "Data Modeling", "Inference APIs"]}
+      target="_self"
+    />
 
-      <HorizontalCard
-        title="Cross-Platform Mobile Apps (Flutter)"
-        img={`${import.meta.env.BASE_URL}flutter.jpeg`}
-        desc="Modern mobile applications with Flutter & Dart: responsive UI, state management, seamless REST API integration, and offline persistence."
-        url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20Flutter%20App"
-        tags={["Flutter", "Dart", "REST Client", "State Management"]}
-        target="_self"
-      />
+    <HorizontalCard
+      title="Cross-Platform Mobile Apps (Flutter)"
+      img={`${import.meta.env.BASE_URL}flutter.jpeg`}
+      desc="Modern mobile applications with Flutter & Dart — responsive UI, state management, seamless REST API integration, and offline persistence."
+      url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20Flutter%20App"
+      tags={["Flutter", "Dart", "REST Client", "State Management"]}
+      target="_self"
+    />
 
-      <HorizontalCard
-        title="Modern Web Applications"
-        img={`${import.meta.env.BASE_URL}website.png`}
-        desc="Fast, responsive, and SEO-optimized web applications and landing pages built with Astro, TailwindCSS, and modern JavaScript frameworks."
-        url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20Web%20Development"
-        tags={["Astro", "TailwindCSS", "TypeScript", "Responsive UI"]}
-        target="_self"
-      />
-    </div>
+    <HorizontalCard
+      title="Modern Web Applications"
+      img={`${import.meta.env.BASE_URL}website.png`}
+      desc="Fast, responsive, SEO-optimized web applications and landing pages built with Astro, TailwindCSS, and modern JavaScript frameworks."
+      url="mailto:abhi620548@gmail.com?subject=Service%20Inquiry%3A%20Web%20Development"
+      tags={["Astro", "TailwindCSS", "TypeScript", "Responsive UI"]}
+      target="_self"
+    />
 
-    <!-- Contact CTA -->
-    <div class="mt-8 p-6 rounded-2xl bg-base-200/60 border border-base-content/10 text-center space-y-3">
-      <h3 class="text-xl font-bold text-base-content">Need a tailored solution?</h3>
-      <p class="text-sm text-base-content/75 max-w-xl mx-auto">
-        Whether you need an API designed from scratch, a system performance review, or full-stack feature delivery, let's talk.
-      </p>
-      <a class="btn btn-primary btn-sm mt-2" href="mailto:abhi620548@gmail.com?subject=General%20Project%20Inquiry">
+    <!-- CTA -->
+    <div class="liquid-glass-card p-6 text-center space-y-3">
+      <h3 class="text-xl font-bold text-white">Need a tailored solution?</h3>
+      <p class="text-sm text-white/60 max-w-lg mx-auto">Whether you need an API designed from scratch, system architecture review, or full-stack feature delivery — let's talk.</p>
+      <a
+        href="mailto:abhi620548@gmail.com?subject=General%20Project%20Inquiry"
+        class="liquid-glass-btn-primary inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold mt-1"
+      >
         Start a Conversation
       </a>
     </div>

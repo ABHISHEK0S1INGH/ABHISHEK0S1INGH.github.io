@@ -4,64 +4,55 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume | Abhishek Singh" sideBarActiveItemID="cv">
-  <div class="space-y-8">
-    <!-- Header with Download Button -->
-    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-base-content/10 pb-4">
+  <div class="space-y-8 pb-12">
+
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-white/10">
       <div>
-        <h1 class="text-3xl font-extrabold text-base-content">Curriculum Vitae</h1>
-        <p class="text-sm text-base-content/70 mt-1">Backend Engineer · Microservices & Scalable Systems</p>
+        <h1 class="text-3xl font-extrabold text-white">Curriculum Vitae</h1>
+        <p class="text-sm text-white/50 mt-1">Backend Engineer · Microservices & Distributed Systems</p>
       </div>
       <a
-        class="btn btn-primary btn-sm gap-2 w-fit"
         href={`${import.meta.env.BASE_URL}resume.pdf`}
-        target="_blank"
-        rel="noopener"
+        target="_blank" rel="noopener"
+        class="liquid-glass-btn-primary inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold w-fit"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
         </svg>
-        Download Resume (PDF)
+        Download PDF
       </a>
     </div>
 
-    <!-- Profile Summary -->
-    <div class="p-5 rounded-xl bg-base-200/50 border border-base-content/10 space-y-2">
-      <h2 class="text-xl font-bold text-base-content">Professional Summary</h2>
-      <p class="text-base-content/85 leading-relaxed text-sm md:text-base">
-        Abhishek Singh is a Backend Engineer focused on Java and Spring Boot. Specializes in building secure, scalable microservices and APIs
-        with JWT authentication, JPA/Hibernate persistence, and robust data models on PostgreSQL/MySQL. Proficient with
-        in-memory caching, distributed streaming with Apache Kafka, timezone-safe utilities, Docker containerization, and AWS.
-        Recently delivered a production healthcare consultation microservice at PolicyBazaar enabling online/offline doctor bookings,
-        patient profiling, payment status tracking, and AiSHA biometric health-data endpoints.
+    <!-- Summary -->
+    <div class="liquid-glass-card p-5 space-y-2">
+      <h2 class="text-lg font-bold text-white">Professional Summary</h2>
+      <p class="text-sm text-white/70 leading-relaxed">
+        Backend Engineer focused on Java and Spring Boot — building secure, scalable microservices with JWT, JPA/Hibernate,
+        and robust data models on PostgreSQL/MySQL. Proficient in distributed streaming with Apache Kafka, in-memory caching,
+        Docker containerization, and AWS. Delivered production healthcare microservices at PolicyBazaar enabling real-time doctor bookings and AiSHA biometric data endpoints.
       </p>
     </div>
 
     <!-- Experience -->
-    <div>
-      <h2 class="text-2xl font-bold text-base-content mb-4">Experience</h2>
-      <div class="time-line-container">
-        <TimeLineElement
-          title="Java Backend Intern — PolicyBazaar.com"
-          subtitle="Aug 2025 – Nov 2025 · On-site Gurugram"
-        >
-          Built a Spring Boot microservice for healthcare consultations (doctor bookings, patient profiling, payment status).
-          Integrated JWT-secured partner REST APIs with JPA persistence and Kafka-based structured logging.
-          Added robust validation, in-memory caching and date/time utilities for reliable, timezone-aware processing.
-          Implemented AiSHA health-data APIs (graphs and POST endpoints) with proper JWT authentication and DB writes.
+    <div class="space-y-3">
+      <h2 class="text-2xl font-bold text-white">Experience</h2>
+      <div class="time-line-container space-y-1">
+        <TimeLineElement title="Java Backend Intern — PolicyBazaar.com" subtitle="Aug 2025 – Nov 2025 · On-site Gurugram">
+          Built a Spring Boot microservice for healthcare consultations.
+          Integrated JWT-secured partner APIs with JPA persistence and Kafka structured logging.
+          Added in-memory caching, validation, and timezone-safe utilities for reliable processing.
+          Implemented AiSHA health data APIs (graphs + POST endpoints) with JWT auth and DB writes.
         </TimeLineElement>
-
-        <TimeLineElement
-          title="AI Researcher — Coding Jr"
-          subtitle="Jan 2025 – Feb 2025 · Remote"
-        >
-          Built a custom Copilot using open Large Language Models and fine-tuned it for domain-specific coding assistance workflows.
+        <TimeLineElement title="AI Researcher — Coding Jr" subtitle="Jan 2025 – Feb 2025 · Remote">
+          Built a custom AI Copilot by fine-tuning open-source LLMs for domain-specific coding assistance.
         </TimeLineElement>
       </div>
     </div>
 
     <!-- Education -->
-    <div>
-      <h2 class="text-2xl font-bold text-base-content mb-4">Education</h2>
+    <div class="space-y-3">
+      <h2 class="text-2xl font-bold text-white">Education</h2>
       <div class="time-line-container">
         <TimeLineElement
           title="Bachelor of Technology — Information Technology"
@@ -71,64 +62,35 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     </div>
 
     <!-- Certifications -->
-    <div>
-      <h2 class="text-2xl font-bold text-base-content mb-3">Certifications</h2>
-      <div class="p-4 rounded-xl bg-base-200/40 border border-base-content/10">
-        <div class="font-semibold text-base-content">Machine Learning & Data Science Program</div>
-        <div class="text-sm text-primary">GeeksforGeeks (Apr 2024 – Sep 2024)</div>
+    <div class="space-y-3">
+      <h2 class="text-2xl font-bold text-white">Certifications</h2>
+      <div class="liquid-glass-card p-4">
+        <div class="font-semibold text-white">Machine Learning & Data Science Program</div>
+        <div class="text-sm text-sky-400">GeeksforGeeks · Apr 2024 – Sep 2024</div>
       </div>
     </div>
 
-    <!-- Skills Matrix -->
-    <div>
-      <h2 class="text-2xl font-bold text-base-content mb-4">Technical Skills</h2>
+    <!-- Skills -->
+    <div class="space-y-3">
+      <h2 class="text-2xl font-bold text-white">Technical Skills</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-4 rounded-xl bg-base-200/40 border border-base-content/10">
-          <div class="text-xs uppercase font-bold text-primary tracking-wider mb-2">Backend & Microservices</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-neutral">Java</span>
-            <span class="badge badge-neutral">Spring Boot</span>
-            <span class="badge badge-neutral">RESTful APIs</span>
-            <span class="badge badge-neutral">Microservices</span>
-            <span class="badge badge-neutral">JPA / Hibernate</span>
-            <span class="badge badge-neutral">FastAPI</span>
-            <span class="badge badge-neutral">JWT Auth</span>
+        {[
+          { label: "Backend & Microservices", color: "text-sky-400", skills: ["Java", "Spring Boot", "RESTful APIs", "Microservices", "JPA/Hibernate", "FastAPI", "JWT Auth"] },
+          { label: "Data & Streaming",        color: "text-emerald-400", skills: ["Apache Kafka", "PostgreSQL", "MySQL", "Redis / Caching", "SQL", "Data Modeling"] },
+          { label: "Cloud & DevOps",           color: "text-purple-400", skills: ["Docker", "AWS (EC2, S3)", "Git / GitHub", "GitHub Actions CI/CD", "Linux"] },
+          { label: "Languages & ML",           color: "text-amber-400", skills: ["Python", "C++", "Flutter", "Scikit-learn", "DSA", "rPPG Biometrics"] },
+        ].map(({ label, color, skills }) => (
+          <div class="liquid-glass-card p-4 space-y-3">
+            <div class={`text-xs font-bold uppercase tracking-widest ${color}`}>{label}</div>
+            <div class="flex flex-wrap gap-1.5">
+              {skills.map((s) => (
+                <span class="liquid-glass-pill px-2.5 py-1 text-xs text-white/65">{s}</span>
+              ))}
+            </div>
           </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-base-200/40 border border-base-content/10">
-          <div class="text-xs uppercase font-bold text-accent tracking-wider mb-2">Data & Streaming</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-neutral">Apache Kafka</span>
-            <span class="badge badge-neutral">PostgreSQL</span>
-            <span class="badge badge-neutral">MySQL</span>
-            <span class="badge badge-neutral">In-Memory Caching</span>
-            <span class="badge badge-neutral">SQL</span>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-base-200/40 border border-base-content/10">
-          <div class="text-xs uppercase font-bold text-secondary tracking-wider mb-2">Cloud & DevOps</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-neutral">Docker</span>
-            <span class="badge badge-neutral">AWS (EC2, S3)</span>
-            <span class="badge badge-neutral">Git / GitHub</span>
-            <span class="badge badge-neutral">Linux</span>
-            <span class="badge badge-neutral">CI/CD</span>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-base-200/40 border border-base-content/10">
-          <div class="text-xs uppercase font-bold text-info tracking-wider mb-2">Languages & Fundamentals</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-neutral">Python</span>
-            <span class="badge badge-neutral">C++</span>
-            <span class="badge badge-neutral">Flutter</span>
-            <span class="badge badge-neutral">Scikit-learn</span>
-            <span class="badge badge-neutral">DSA</span>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
+
   </div>
 </BaseLayout>
