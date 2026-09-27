@@ -29,7 +29,7 @@ const {
       });
     </script>
   </head>
-  <body class="min-h-screen antialiased selection:bg-cyan-400/30">
+  <body class="min-h-screen overflow-x-hidden antialiased selection:bg-cyan-400/30">
     <!-- Animated Liquid Orbs -->
     <div class="liquid-canvas" aria-hidden="true">
       <div class="liquid-orb-1"></div>
@@ -40,10 +40,10 @@ const {
     <!-- Layout -->
     <div class="drawer lg:drawer-open relative z-10 liquid-shell">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col min-h-screen">
+      <div class="drawer-content flex min-w-0 flex-col min-h-screen">
         <Header title={SITE_TITLE} />
-        <div class="md:flex md:justify-center grow">
-          <main class="p-4 sm:p-6 pt-6 lg:max-w-[980px] max-w-[100vw] w-full">
+        <div class="flex min-w-0 grow justify-center">
+          <main class="min-w-0 w-full max-w-full p-4 pt-6 sm:p-6 lg:max-w-[980px]">
             <slot />
           </main>
         </div>
