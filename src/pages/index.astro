@@ -4,224 +4,245 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-2 space-y-12">
-    <!-- Hero Section -->
-    <section class="space-y-5">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
-        <span>⚡</span> Backend & Distributed Systems Engineer
-      </div>
-      
-      <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-base-content">
-          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Abhishek Singh</span>
-        </h1>
-        <h2 class="text-xl md:text-2xl py-2 font-semibold text-base-content/90">
-          Building resilient microservices, high-throughput APIs, and data-driven systems
-        </h2>
+  <div class="pb-16 mt-1 space-y-10">
+
+    <!-- ── Hero ─────────────────────────────────────────── -->
+    <section class="space-y-6 pt-2">
+
+      <!-- Live status -->
+      <div class="inline-flex items-center gap-2 liquid-glass-pill px-4 py-2 text-xs font-semibold text-emerald-300">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+        </span>
+        Open to Backend & Full-Time Engineering Roles
       </div>
 
-      <p class="text-base md:text-lg leading-relaxed text-base-content/80 max-w-3xl">
-        Former Java Backend Intern at <strong>PolicyBazaar</strong>. Experienced in architecting production-ready microservices,
-        integrating JWT-secured REST APIs, event-driven streaming with <strong>Apache Kafka</strong>, and in-memory caching for low-latency processing.
+      <!-- Main headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
+        Building <span style="background:linear-gradient(135deg,#38bdf8,#818cf8,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">
+          scalable microservices
+        </span>
+        <br/>& distributed systems.
+      </h1>
+
+      <p class="text-base md:text-lg text-white/70 max-w-2xl leading-relaxed">
+        I'm <span class="font-semibold text-white">Abhishek Singh</span> — backend engineer with production experience at
+        <span class="text-sky-400 font-medium">PolicyBazaar</span>. Specializing in Spring Boot, Apache Kafka, and low-latency API design.
       </p>
 
-      <!-- Key Metrics / Highlights Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-        <div class="p-3.5 rounded-lg bg-base-200/70 border border-base-content/10">
-          <div class="text-xs uppercase font-semibold text-primary">Experience</div>
-          <div class="text-lg font-bold text-base-content mt-0.5">PolicyBazaar.com</div>
-          <div class="text-xs text-base-content/70">Healthcare Microservices</div>
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
+          target="_blank" rel="noopener"
+          class="liquid-glass-btn-primary inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+          Download Resume
+        </a>
+        <a href={`${import.meta.env.BASE_URL}projects`} class="liquid-glass-btn inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white/90">
+          View Projects
+        </a>
+        <a href="https://github.com/ABHISHEK0S1INGH" target="_blank" rel="noopener" class="liquid-glass-btn inline-flex items-center gap-2 px-5 py-3 text-sm font-medium text-white/75">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+
+      <!-- Code Terminal (Liquid Glass) -->
+      <div class="liquid-terminal overflow-hidden">
+        <div class="flex items-center justify-between px-5 py-3 border-b border-white/10">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+            <span class="ml-3 text-xs font-mono text-white/40">ConsultationController.java</span>
+          </div>
+          <span class="text-xs font-mono text-emerald-400/70">Spring Boot · Kafka · JWT</span>
         </div>
-        <div class="p-3.5 rounded-lg bg-base-200/70 border border-base-content/10">
-          <div class="text-xs uppercase font-semibold text-accent">Core Focus</div>
-          <div class="text-lg font-bold text-base-content mt-0.5">Spring Boot & Kafka</div>
-          <div class="text-xs text-base-content/70">Event-driven Architecture</div>
+        <div class="p-5 text-xs sm:text-sm font-mono leading-loose text-slate-300 overflow-x-auto">
+          <p><span class="text-indigo-400">@RestController</span></p>
+          <p><span class="text-indigo-400">@RequestMapping</span>(<span class="text-emerald-300">"/api/v1/consultations"</span>)</p>
+          <p><span class="text-sky-400">public class</span> <span class="text-amber-300">ConsultationController</span> &#123;</p>
+          <p class="pl-5 mt-1"><span class="text-indigo-400">@PostMapping</span>(<span class="text-emerald-300">"/book"</span>)</p>
+          <p class="pl-5"><span class="text-sky-400">public</span> ResponseEntity&lt;BookingResponse&gt; <span class="text-blue-300">createBooking</span>(<span class="text-indigo-400">@Valid @RequestBody</span> BookingRequest req) &#123;</p>
+          <p class="pl-10 text-slate-500">// Validate JWT, persist to PostgreSQL, stream audit → Kafka</p>
+          <p class="pl-10"><span class="text-sky-400">return</span> ResponseEntity.ok(bookingService.process(req));</p>
+          <p class="pl-5">&#125;</p>
+          <p>&#125;</p>
         </div>
-        <div class="p-3.5 rounded-lg bg-base-200/70 border border-base-content/10">
-          <div class="text-xs uppercase font-semibold text-secondary">Education</div>
-          <div class="text-lg font-bold text-base-content mt-0.5">B.Tech in IT</div>
-          <div class="text-xs text-base-content/70">AKTU (2021 – 2025)</div>
+      </div>
+    </section>
+
+    <!-- ── Stats Row ──────────────────────────────────── -->
+    <section class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      {[
+        { val: "Live", sub: "PolicyBazaar DocPrime", color: "from-sky-400 to-blue-500" },
+        { val: "8+",   sub: "Health Biometrics (rPPG)", color: "from-emerald-400 to-teal-500" },
+        { val: "Kafka",sub: "Event Streaming & Logging", color: "from-indigo-400 to-purple-500" },
+        { val: "2025", sub: "B.Tech IT Graduate", color: "from-amber-400 to-orange-500" },
+      ].map(({ val, sub, color }) => (
+        <div class="liquid-glass-card p-4 text-center space-y-1">
+          <div class={`text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${color}`}>{val}</div>
+          <div class="text-[11px] text-white/60 leading-tight">{sub}</div>
+        </div>
+      ))}
+    </section>
+
+    <!-- ── Architecture Bento ─────────────────────────── -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10">
+        <div>
+          <h2 class="text-2xl font-bold text-white">System Architecture</h2>
+          <p class="text-xs text-white/50 mt-0.5">How I design high-reliability distributed systems</p>
         </div>
       </div>
 
-      <!-- Quick Action Buttons -->
-      <div class="pt-3 flex flex-wrap gap-3">
-        <a class="btn btn-primary" href={`${import.meta.env.BASE_URL}resume.pdf`} target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Flow card (2 col) -->
+        <div class="md:col-span-2 liquid-glass-card p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Microservice Request Flow</span>
+            <span class="liquid-glass-pill px-2.5 py-1 text-[10px] font-mono text-white/50">Event-Driven</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-[11px] font-mono">
+            {[
+              { label: "Client Apps", sub: "Web / Mobile", color: "text-sky-300" },
+              { label: "API Gateway", sub: "JWT + Rate Limit", color: "text-emerald-300" },
+              { label: "Spring Boot", sub: "Business Logic", color: "text-indigo-300" },
+              { label: "Kafka + DB",  sub: "PostgreSQL / Redis", color: "text-purple-300" },
+            ].map(({ label, sub, color }) => (
+              <div class="liquid-glass p-3 rounded-xl space-y-0.5">
+                <div class={`font-semibold ${color}`}>{label}</div>
+                <div class="text-white/40">{sub}</div>
+              </div>
+            ))}
+          </div>
+          <p class="text-xs text-white/65 leading-relaxed">
+            Idempotent endpoints, connection pooling, structured Kafka topic streaming and in-memory caching — engineered for zero data loss at peak healthcare appointment traffic.
+          </p>
+        </div>
+
+        <!-- Stack card -->
+        <div class="liquid-glass-card p-5 space-y-3 flex flex-col">
+          <span class="text-xs font-bold uppercase tracking-widest text-accent">Core Tech Stack</span>
+          <div class="flex flex-wrap gap-1.5 grow">
+            {["Java 17/21", "Spring Boot 3", "Apache Kafka", "PostgreSQL", "Redis", "Docker", "FastAPI", "AWS"].map((t) => (
+              <span class="liquid-glass-pill px-2.5 py-1 text-xs text-white/70">{t}</span>
+            ))}
+          </div>
+          <a href={`${import.meta.env.BASE_URL}cv`} class="text-xs text-sky-400 hover:text-sky-300 font-medium transition-colors">
+            Full Background & Skills →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Experience ─────────────────────────────────── -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10">
+        <h2 class="text-2xl font-bold text-white">Work Experience</h2>
+        <a href={`${import.meta.env.BASE_URL}cv`} class="text-xs text-sky-400 hover:underline font-medium">Full Timeline →</a>
+      </div>
+
+      <div class="space-y-3">
+        <!-- PolicyBazaar -->
+        <article class="liquid-glass-card p-5 space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+            <div>
+              <h3 class="font-bold text-lg text-white">Java Backend Intern</h3>
+              <div class="text-sm font-semibold text-sky-400">PolicyBazaar.com</div>
+            </div>
+            <span class="liquid-glass-pill px-3 py-1 text-xs font-mono text-white/60 w-fit">
+              Aug – Nov 2025 · Gurugram
+            </span>
+          </div>
+          <ul class="list-disc ml-5 space-y-1.5 text-sm text-white/70 leading-relaxed">
+            <li>Built a <strong class="text-white/90">Spring Boot microservice</strong> powering healthcare consultations — doctor bookings, patient profiling, and payment tracking.</li>
+            <li>Integrated partner REST APIs secured with <strong class="text-white/90">JWT</strong>, persisted via <strong class="text-white/90">JPA/Hibernate</strong>, and streamed audit logs to <strong class="text-white/90">Apache Kafka</strong>.</li>
+            <li>Implemented in-memory caching and timezone-safe utilities for deterministic concurrent transaction handling.</li>
+            <li>Built <strong class="text-white/90">AiSHA</strong> biometric health data APIs (vitals graphs + authenticated writes) — live in DocPrime.</li>
+          </ul>
+          <div class="flex flex-wrap gap-1.5">
+            {["Java", "Spring Boot", "Apache Kafka", "JPA/Hibernate", "PostgreSQL", "JWT"].map((t) => (
+              <span class="liquid-glass-pill px-2.5 py-1 text-xs font-mono text-white/55">{t}</span>
+            ))}
+          </div>
+        </article>
+
+        <!-- Coding Jr -->
+        <article class="liquid-glass-card p-5 space-y-2">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+            <div>
+              <h3 class="font-bold text-lg text-white">AI Researcher</h3>
+              <div class="text-sm font-semibold text-sky-400">Coding Jr</div>
+            </div>
+            <span class="liquid-glass-pill px-3 py-1 text-xs font-mono text-white/60 w-fit">
+              Jan – Feb 2025 · Remote
+            </span>
+          </div>
+          <p class="text-sm text-white/70">Built a domain-specific AI Copilot by fine-tuning open-source LLMs for developer coding assistance workflows.</p>
+          <div class="flex flex-wrap gap-1.5">
+            {["Python", "LLMs", "Fine-Tuning"].map((t) => (
+              <span class="liquid-glass-pill px-2.5 py-1 text-xs font-mono text-white/55">{t}</span>
+            ))}
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Featured Projects ──────────────────────────── -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10">
+        <h2 class="text-2xl font-bold text-white">Featured Projects</h2>
+        <a href={`${import.meta.env.BASE_URL}projects`} class="text-xs text-sky-400 hover:underline font-medium">All Projects →</a>
+      </div>
+
+      <HorizontalCard
+        title="AiSHA — Personal Health Assistant"
+        img={`${import.meta.env.BASE_URL}aisha.jpg`}
+        desc="Contactless biometric microservice using rPPG to compute 8+ vitals (SpO2, HRV, blood pressure, stress). FastAPI + AWS + Kafka + JWT. Deployed live in PolicyBazaar's DocPrime."
+        url="https://github.com/ABHISHEK0S1INGH/AiSHA---Personal-Health-Assistant"
+        badge="PRODUCTION LIVE"
+        tags={["FastAPI", "Python", "Kafka", "AWS", "JWT", "rPPG"]}
+      />
+
+      <HorizontalCard
+        title="Data Warehouse & Analytics Platform"
+        img={`${import.meta.env.BASE_URL}data_warehouse.png`}
+        desc="End-to-end data warehousing solution — ingestion pipelines, schema modeling, analytical aggregation, and dashboard metrics."
+        url="https://github.com/ABHISHEK0S1INGH/Data_warehouse"
+        badge="DATA ARCHITECTURE"
+        tags={["SQL", "ETL", "Data Modeling", "Analytics"]}
+      />
+    </section>
+
+    <!-- ── Contact CTA ────────────────────────────────── -->
+    <section class="liquid-glass-card p-8 text-center space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Ready to build something impactful?</h2>
+      <p class="text-sm text-white/65 max-w-xl mx-auto leading-relaxed">
+        Actively interviewing for full-time Backend Engineering roles. Open to interesting technical collaborations.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+        <a href="mailto:abhi620548@gmail.com" class="liquid-glass-btn-primary inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
           </svg>
-          Download Resume (PDF)
+          abhi620548@gmail.com
         </a>
-        <a class="btn btn-outline" href={`${import.meta.env.BASE_URL}cv`}>
-          View Full CV
+        <a href="https://www.linkedin.com/in/abhishek0s1ingh/" target="_blank" rel="noopener" class="liquid-glass-btn inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white/80">
+          LinkedIn
         </a>
-        <a class="btn btn-ghost border border-base-content/15" href="https://github.com/ABHISHEK0S1INGH" target="_blank" rel="noopener">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z" />
-          </svg>
+        <a href="https://github.com/ABHISHEK0S1INGH" target="_blank" rel="noopener" class="liquid-glass-btn inline-flex items-center gap-2 px-5 py-3 text-sm text-white/65">
           GitHub
         </a>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="space-y-4">
-      <div class="flex items-center justify-between border-b border-base-content/10 pb-2">
-        <h3 class="text-2xl font-bold text-base-content">Work Experience</h3>
-        <a href={`${import.meta.env.BASE_URL}cv`} class="text-xs text-primary hover:underline font-medium">View Timeline &rarr;</a>
-      </div>
-
-      <div class="space-y-4">
-        <!-- PolicyBazaar -->
-        <article class="p-5 rounded-xl bg-base-200/50 border border-base-content/10 hover:border-primary/30 transition-all">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-            <div>
-              <h4 class="font-bold text-lg text-base-content">Java Backend Intern</h4>
-              <div class="text-sm font-medium text-primary">PolicyBazaar.com</div>
-            </div>
-            <span class="text-xs px-2.5 py-1 rounded-full bg-base-300 text-base-content/80 font-mono w-fit">
-              Aug 2025 – Nov 2025 • Gurugram
-            </span>
-          </div>
-
-          <ul class="list-disc ml-5 mt-3 space-y-2 text-sm text-base-content/80 leading-relaxed">
-            <li>Designed and built a <strong>Spring Boot microservice</strong> for healthcare consultations, powering doctor bookings, patient profiling, and payment tracking.</li>
-            <li>Integrated external partner REST APIs secured with <strong>JWT</strong>, persisted state via <strong>JPA/Hibernate</strong>, and streamed audit logs to <strong>Apache Kafka</strong>.</li>
-            <li>Implemented in-memory caching and timezone-safe date/time utilities to ensure deterministic processing.</li>
-            <li>Created <strong>AiSHA</strong> biometric data endpoints (metrics/graphs and authenticated writes) in production DocPrime ecosystem.</li>
-          </ul>
-
-          <div class="flex flex-wrap gap-1.5 mt-4">
-            <span class="badge badge-sm badge-outline">Java</span>
-            <span class="badge badge-sm badge-outline">Spring Boot</span>
-            <span class="badge badge-sm badge-outline">Apache Kafka</span>
-            <span class="badge badge-sm badge-outline">JPA / Hibernate</span>
-            <span class="badge badge-sm badge-outline">PostgreSQL</span>
-            <span class="badge badge-sm badge-outline">JWT</span>
-          </div>
-        </article>
-
-        <!-- Coding Jr -->
-        <article class="p-5 rounded-xl bg-base-200/50 border border-base-content/10 hover:border-primary/30 transition-all">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-            <div>
-              <h4 class="font-bold text-lg text-base-content">AI Researcher</h4>
-              <div class="text-sm font-medium text-primary">Coding Jr</div>
-            </div>
-            <span class="text-xs px-2.5 py-1 rounded-full bg-base-300 text-base-content/80 font-mono w-fit">
-              Jan 2025 – Feb 2025 • Remote
-            </span>
-          </div>
-
-          <p class="mt-3 text-sm text-base-content/80 leading-relaxed">
-            Built an AI Copilot using open-source Large Language Models (LLMs) and fine-tuned it for domain-specific code assistance workflows.
-          </p>
-
-          <div class="flex flex-wrap gap-1.5 mt-3">
-            <span class="badge badge-sm badge-outline">Python</span>
-            <span class="badge badge-sm badge-outline">LLMs</span>
-            <span class="badge badge-sm badge-outline">Fine-tuning</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="space-y-4">
-      <div class="border-b border-base-content/10 pb-2">
-        <h3 class="text-2xl font-bold text-base-content">Technical Skills</h3>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-4 rounded-xl bg-base-200/40 border border-base-content/10">
-          <div class="text-xs uppercase font-bold text-primary tracking-wider mb-2">Backend & Microservices</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-neutral">Java</span>
-            <span class="badge badge-neutral">Spring Boot</span>
-            <span class="badge badge-neutral">REST APIs</span>
-            <span class="badge badge-neutral">Microservices</span>
-            <span class="badge badge-neutral">JPA / Hibernate</span>
-            <span class="badge badge-neutral">FastAPI</span>
-            <span class="badge badge-neutral">JWT Security</span>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-base-200/40 border border-base-content/10">
-          <div class="text-xs uppercase font-bold text-accent tracking-wider mb-2">Data & Streaming</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-neutral">Apache Kafka</span>
-            <span class="badge badge-neutral">PostgreSQL</span>
-            <span class="badge badge-neutral">MySQL</span>
-            <span class="badge badge-neutral">In-Memory Caching</span>
-            <span class="badge badge-neutral">SQL</span>
-            <span class="badge badge-neutral">Data Warehousing</span>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-base-200/40 border border-base-content/10">
-          <div class="text-xs uppercase font-bold text-secondary tracking-wider mb-2">Cloud, DevOps & Tools</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-neutral">Docker</span>
-            <span class="badge badge-neutral">AWS (EC2, S3)</span>
-            <span class="badge badge-neutral">Git / GitHub</span>
-            <span class="badge badge-neutral">GitHub Actions CI/CD</span>
-            <span class="badge badge-neutral">Linux</span>
-          </div>
-        </div>
-
-        <div class="p-4 rounded-xl bg-base-200/40 border border-base-content/10">
-          <div class="text-xs uppercase font-bold text-info tracking-wider mb-2">Languages & Machine Learning</div>
-          <div class="flex flex-wrap gap-2">
-            <span class="badge badge-neutral">Python</span>
-            <span class="badge badge-neutral">C++</span>
-            <span class="badge badge-neutral">Flutter</span>
-            <span class="badge badge-neutral">Scikit-learn</span>
-            <span class="badge badge-neutral">DSA</span>
-            <span class="badge badge-neutral">rPPG Biometrics</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="projects" class="space-y-4">
-      <div class="flex items-center justify-between border-b border-base-content/10 pb-2">
-        <h3 class="text-2xl font-bold text-base-content">Featured Project</h3>
-        <a href={`${import.meta.env.BASE_URL}projects`} class="text-xs text-primary hover:underline font-medium">All Projects &rarr;</a>
-      </div>
-
-      <HorizontalCard
-        title="AiSHA — Your Personal Health Assistant"
-        img={`${import.meta.env.BASE_URL}aisha.jpg`}
-        desc="Production biometric analysis microservice utilizing rPPG to derive 8+ health metrics (SpO2, HRV, blood pressure, stress). Built with FastAPI, Kafka logging, AWS, and JWT authentication. Integrated live into PolicyBazaar's DocPrime."
-        url="https://github.com/ABHISHEK0S1INGH/AiSHA---Personal-Health-Assistant"
-        badge="LIVE IN PRODUCTION"
-        tags={["FastAPI", "Python", "Kafka", "AWS", "JWT", "Microservices"]}
-      />
-    </section>
-
-    <!-- Contact CTA Section -->
-    <section id="contact" class="p-6 rounded-2xl bg-gradient-to-r from-base-200/90 to-base-300/60 border border-base-content/10">
-      <div class="max-w-2xl space-y-3">
-        <h3 class="text-2xl font-bold text-base-content">Let's Connect</h3>
-        <p class="text-sm md:text-base text-base-content/80 leading-relaxed">
-          I'm currently open to full-time Backend Engineering opportunities, contract collaborations, and engineering discussions.
-        </p>
-        <div class="flex flex-wrap items-center gap-3 pt-2">
-          <a class="btn btn-primary btn-sm" href="mailto:abhi620548@gmail.com">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            abhi620548@gmail.com
-          </a>
-          <a class="btn btn-outline btn-sm" href="https://www.linkedin.com/in/abhishek0s1ingh/" target="_blank" rel="noopener">
-            LinkedIn
-          </a>
-          <a class="btn btn-ghost btn-sm" href="https://github.com/ABHISHEK0S1INGH" target="_blank" rel="noopener">
-            GitHub Profile
-          </a>
-        </div>
-      </div>
-    </section>
   </div>
 </BaseLayout>

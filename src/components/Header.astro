@@ -1,22 +1,19 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
-const { title = "Abhishek Singh" } = Astro.props;
 ---
 
-<header
-  class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-between items-center bg-base-100/80 backdrop-blur-md transition-all duration-100 text-base-content border-b border-base-content/10 px-3 shadow-sm"
->
-  <div class="flex items-center gap-2">
-    <label for="my-drawer" class="btn btn-square btn-ghost btn-sm" aria-label="Open navigation menu">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </label>
-    <a class="btn btn-ghost normal-case text-base font-semibold px-2 hover:bg-transparent" href={import.meta.env.BASE_URL}>
-      Abhishek Singh
-    </a>
-  </div>
-  <div class="flex items-center">
+<header class="sticky lg:hidden top-0 z-30 px-4 py-2">
+  <div class="dynamic-island flex items-center justify-between px-4 py-2.5 shadow-lg">
+    <div class="flex items-center gap-3">
+      <label for="my-drawer" class="btn btn-ghost btn-sm btn-circle" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-5 h-5 stroke-current">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+      <a href={import.meta.env.BASE_URL} class="text-sm font-semibold text-white/90 tracking-tight">
+        Abhishek Singh
+      </a>
+    </div>
     <ThemeToggle />
   </div>
 </header>

@@ -1,24 +1,56 @@
 ---
 const { sideBarActiveItemID } = Astro.props;
-const activeClass = "active font-medium";
+const navItems = [
+  { id: "home", label: "Home", href: import.meta.env.BASE_URL, icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" },
+  { id: "projects", label: "Projects", href: `${import.meta.env.BASE_URL}projects`, icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" },
+  { id: "services", label: "Services", href: `${import.meta.env.BASE_URL}services`, icon: "M13 10V3L4 14h7v7l9-11h-7z" },
+  { id: "cv", label: "CV / Resume", href: `${import.meta.env.BASE_URL}cv`, icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" },
+];
 ---
 
-<ul class="menu grow shrink menu-md overflow-y-auto px-2 gap-1">
-    <li><a class="py-2.5 text-sm rounded-lg transition-colors" id="home" href={import.meta.env.BASE_URL}>Home</a></li>
-    <li><a class="py-2.5 text-sm rounded-lg transition-colors" id="projects" href={`${import.meta.env.BASE_URL}projects`}>Projects</a></li>
-    <li><a class="py-2.5 text-sm rounded-lg transition-colors" id="services" href={`${import.meta.env.BASE_URL}services`}>Services</a></li>
-    <li><a class="py-2.5 text-sm rounded-lg transition-colors" id="cv" href={`${import.meta.env.BASE_URL}cv`}>CV / Resume</a></li>
-    <li>
-        <a
-            class="py-2.5 text-sm rounded-lg transition-colors"
-            href="mailto:abhi620548@gmail.com"
-            target="_blank"
-            referrerpolicy="no-referrer-when-downgrade">Contact</a
-        >
-    </li>
-</ul>
+<nav class="flex flex-col gap-1 px-3 py-2 grow">
+  {navItems.map(({ id, label, href, icon }) => (
+    <a
+      href={href}
+      class:list={[
+        "sidebar-nav-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium transition-all duration-300",
+        sideBarActiveItemID === id
+          ? "sidebar-nav-link-active liquid-glass-pill text-white shadow-md"
+          : "text-white/60 hover:text-white hover:bg-white/8",
+      ]}
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+        <path stroke-linecap="round" stroke-linejoin="round" d={icon} />
+      </svg>
+      {label}
+    </a>
+  ))}
 
-<script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
-const activeItemElem = document.getElementById(sideBarActiveItemID);
-activeItemElem && activeItemElem.classList.add(...activeClass.split(" "));
+  <a
+    href="mailto:abhi620548@gmail.com"
+    class="sidebar-nav-link flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium text-white/60 hover:text-white hover:bg-white/8 transition-all duration-300 mt-auto"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    </svg>
+    Contact
+  </a>
+</nav>
+
+<style>
+  a.hover\:bg-white\/8:hover { background: rgba(255,255,255,0.08); }
+</style>
+
+<script>
+  function closeMobileDrawer() {
+    if (window.innerWidth < 1024) {
+      const drawer = document.querySelector("#my-drawer");
+      if (drawer instanceof HTMLInputElement) drawer.checked = false;
+    }
+  }
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target instanceof Element && target.closest(".sidebar-nav-link")) closeMobileDrawer();
+  });
 </script>
