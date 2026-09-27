@@ -10,7 +10,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-white/10">
       <div>
         <h1 class="text-3xl font-extrabold text-white">Curriculum Vitae</h1>
-        <p class="text-sm text-white/50 mt-1">Backend Engineer · Microservices & Distributed Systems</p>
+        <p class="text-sm text-white/50 mt-1">Backend Software Engineer · Health-tech & AI Systems</p>
       </div>
       <a
         href={`${import.meta.env.BASE_URL}resume.pdf`}
@@ -28,9 +28,8 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="liquid-glass-card p-5 space-y-2">
       <h2 class="text-lg font-bold text-white">Professional Summary</h2>
       <p class="text-sm text-white/70 leading-relaxed">
-        Backend Engineer focused on Java and Spring Boot — building secure, scalable microservices with JWT, JPA/Hibernate,
-        and robust data models on PostgreSQL/MySQL. Proficient in distributed streaming with Apache Kafka, in-memory caching,
-        Docker containerization, and AWS. Delivered production healthcare microservices at PolicyBazaar enabling real-time doctor bookings and AiSHA biometric data endpoints.
+        Backend software engineer at Policybazaar, working on DocPrime's healthcare and wellness platform. I build Java and Spring Boot APIs,
+        MySQL data models, partner integrations, biometric health services, on-premise AI assistants, and developer productivity workflows.
       </p>
     </div>
 
@@ -38,14 +37,11 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="space-y-3">
       <h2 class="text-2xl font-bold text-white">Experience</h2>
       <div class="time-line-container space-y-1">
-        <TimeLineElement title="Java Backend Intern — PolicyBazaar.com" subtitle="Aug 2025 – Nov 2025 · On-site Gurugram">
-          Built a Spring Boot microservice for healthcare consultations.
-          Integrated JWT-secured partner APIs with JPA persistence and Kafka structured logging.
-          Added in-memory caching, validation, and timezone-safe utilities for reliable processing.
-          Implemented AiSHA health data APIs (graphs + POST endpoints) with JWT auth and DB writes.
-        </TimeLineElement>
-        <TimeLineElement title="AI Researcher — Coding Jr" subtitle="Jan 2025 – Feb 2025 · Remote">
-          Built a custom AI Copilot by fine-tuning open-source LLMs for domain-specific coding assistance.
+        <TimeLineElement title="Software Engineer (Backend) — Policybazaar / DocPrime" subtitle="Present · Gurugram">
+          Build Java and Spring Boot REST APIs and MySQL schemas for the DocPrime mobile app.
+          Integrate partner SDKs and APIs including Hubble Money and Lenskart offers.
+          Develop Aisha biometric analysis, PDF health reports, and an on-premise Ollama/RAG assistant.
+          Build AI coding agents, automated code-review workflows, and internal AI enablement sessions.
         </TimeLineElement>
       </div>
     </div>
@@ -75,10 +71,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       <h2 class="text-2xl font-bold text-white">Technical Skills</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
-          { label: "Backend & Microservices", color: "text-sky-400", skills: ["Java", "Spring Boot", "RESTful APIs", "Microservices", "JPA/Hibernate", "FastAPI", "JWT Auth"] },
-          { label: "Data & Streaming",        color: "text-emerald-400", skills: ["Apache Kafka", "PostgreSQL", "MySQL", "Redis / Caching", "SQL", "Data Modeling"] },
-          { label: "Cloud & DevOps",           color: "text-purple-400", skills: ["Docker", "AWS (EC2, S3)", "Git / GitHub", "GitHub Actions CI/CD", "Linux"] },
-          { label: "Languages & ML",           color: "text-amber-400", skills: ["Python", "C++", "Flutter", "Scikit-learn", "DSA", "rPPG Biometrics"] },
+          { label: "Backend & APIs", color: "text-sky-400", skills: ["Java", "Spring Boot", "REST APIs", "MySQL", "Database Design", "Partner Integrations"] },
+          { label: "AI & Health Tech", color: "text-emerald-400", skills: ["Python", "FastAPI", "Ollama", "LLMs", "RAG", "Biometrics", "PDF Reports"] },
+          { label: "Developer Productivity", color: "text-purple-400", skills: ["AI Coding Agents", "Automated Code Review", "VAPT / CVE Remediation", "AI Enablement"] },
+          { label: "Tools & Collaboration", color: "text-amber-400", skills: ["Git", "Bitbucket", "REST SDKs", "Deep Links", "Coupon Management"] },
         ].map(({ label, color, skills }) => (
           <div class="liquid-glass-card p-4 space-y-3">
             <div class={`text-xs font-bold uppercase tracking-widest ${color}`}>{label}</div>
